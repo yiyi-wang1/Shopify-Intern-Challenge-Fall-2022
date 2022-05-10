@@ -29,8 +29,6 @@ function List() {
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
         };
-
-        setIsLoading(true);
         fetch(`https://api.openai.com/v1/engines/${engine}/completions`, {
             method: "POST",
             headers: {
@@ -45,7 +43,6 @@ function List() {
                     text: input,
                     result: data.choices[0].text
                 }
-                setIsLoading(false);
                 const newList = [newItem, ...items]
                 setItems(newList);})
 
