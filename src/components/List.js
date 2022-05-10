@@ -4,7 +4,6 @@ import Item from './Item'
 function List() {
     const [input, setInput] = useState('')
     const [engine, setEngine] = useState('text-curie-001')
-    const [isLoading, setIsLoading] = useState(false)
     const [items, setItems] = useState([])
 
     const handleChange = e => {
